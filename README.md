@@ -1,4 +1,5 @@
-Pawan Malakar's Portfolio
+My Portfolio
+
 Welcome to my Portfolio project! This is an interactive, responsive, and visually appealing portfolio showcasing my work as a Frontend Web Developer. It highlights my skills, projects, and services, allowing potential clients or employers to learn more about my work.
 
 Features
