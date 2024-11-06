@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class=" scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Portfolio</title>
+    <link rel="shortcut icon" href="./assets/favicon-image.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[80%] dark:hidden">
+        <img src="./assets/header-bg-color.png" alt="" class="w-full">
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center  justify-between z-50">
+
+        <img src="./assets/Pawan-final-logo.png" alt="logo" class="w-28 cursor-pointer mr-14 ">
+
+        <ul
+            class=" hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <img src="./assets/moon_icon.png" alt="" class="w-6 dark:hidden">
+                <img src="./assets/sun_icon.png" alt="" class="w-6 hidden dark:block">
+            </button>
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 dark:border-white/50 ">
+                Contact
+                <img src="./assets/arrow-icon.png" alt="" class="w-3 dark:hidden">
+                <img src="./assets/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
+            </a>
+
+            <button class=" block md:hidden ml-3" onclick="openMenu()">
+                <img src="./assets/menu-black.png" alt="" class="w-6 dark:hidden">
+                <img src="./assets/menu-white.png" alt="" class="w-6 hidden dark:block ">
+            </button>
+        </div>
+
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50
+     h-screen bg-rose-50 transition duration-500 dark:bg-[#2a004a] dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./assets/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+                <img src="./assets/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block ">
+            </div>
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About me</a></li>
+            <li><a href="#service" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-------------------header------------->
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+
+        <img src="./assets/profile-pic (3).png" alt="" class="rounded-full w-32">
+        <h3 class=" flex items-end gap-2 text-xl md:text-2xl mb-3">Hi! I'm Pawan <img src="./assets/hand-icon.png"
+                alt="" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">frontend web developer</h1>
+        <p class="max-w-2xl mx-auto">"Frontend Developer passionate about crafting beautiful, user-friendly websites. I
+            specialize in HTML, CSS, and JavaScript, creating engaging digital experiences that delight users. Let’s
+            build something amazing together!"</p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4 ">
+            <a href="#contact"
+                class="px-10 py-3 border rounded-full bg-gradient-to-t from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">Contact
+                me <img src="./assets/right-arrow-white.png" class="w-4 t" alt=""></a>
+
+            <a href="./assets/pawan's-resume.pdf" download
+                class="px-10 py-3 border rounded-full border-gray-500  bg-white flex items-center gap-2 dark:text-black">My
+                Resume <img src="./assets/download-icon.png" class="w-4 t" alt=""></a>
+        </div>
+    </div>
+
+    <!---------------------about me----------------------------->
+
+    <div id="about" class="w-full px-[12%] py-10">
+        <h4 class="text-center mb-2 text-lg ">Introduction</h4>
+        <h2 class="text-center text-5xl">About me</h2>
+
+        <div class=" flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class=" max-w-max mx-auto relative">
+                <img src="./assets/man-sits-desk.avif" class="w-64 sm:w-80 rounded-3xl max-w-none" alt="">
+                <div
+                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-x-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                    <img src="./assets/circular-text.png" class="full animate-spin_slow" alt="">
+                    <img src="./assets/dev-icon.png"
+                        class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="">
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl">Highly motivated Computer Application graduate with a passion for web
+                    development, eager to explore opportunities where my skills can contribute to innovative projects
+                    and drive organizational growth. I aim to leverage my technical knowledge and creativity to deliver
+                    exceptional user experiences.</p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border-[0.5px] border-gray-400 rounded-xl  p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black
+                        dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="./assets/code-icon.png" alt="" class="w-7 mt-3 dark:hidden ">
+                        <img src="./assets/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block ">
+                        <h3 class="my-4 font-semibold text-grey-700 dark:text-white/80">Languages</h3>
+                        <p class="text-gray-600 text-sm dark:text-white">HTML, CSS, Bootsrap JavaScript, TypeScript,
+                            Reactjs </p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl  p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black
+                    dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="./assets/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden ">
+                        <img src="./assets/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block ">
+
+                        <h3 class="my-4 font-semibold text-grey-700 dark:text-white/80">Education</h3>
+                        <p class="text-gray-600 text-sm dark:text-white"> BCA - Atal Bihari Vajpayee University Bilaspur
+                            (C.G.)
+                        </p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl  p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black
+                dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="./assets/project-icon.png" alt="" class="w-7 mt-3 dark:hidden ">
+                        <img src="./assets/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block ">
+                        <h3 class="my-4 font-semibold text-grey-700 dark:text-white/80">Projects</h3>
+                        <p class="text-gray-600 text-sm dark:text-white">Built more than 5 project</p>
+                    </li>
+
+                </ul>
+                <h4 class="my-6 text-gray-700 dark:text-white/80">Tools i use </h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer  hover:-translate-y-1 duration-500">
+                        <img src="./assets/vscode.png" class="w-5 sm:w-7 " alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer  hover:-translate-y-1 duration-500">
+                        <img src="./assets/bootstrap.png" class="w-5 sm:w-7 " alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer  hover:-translate-y-1 duration-500">
+                        <img src="./assets/reactjs.png" class="w-5 sm:w-7 " alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer  hover:-translate-y-1 duration-500">
+                        <img src="./assets/mongodb.png" class="w-5 sm:w-7 " alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer  hover:-translate-y-1 duration-500">
+                        <img src="./assets/git.png" class="w-5 sm:w-7 " alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-------------------------service------------------------------>
+    <div id="service" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg ">What I Offer</h4>
+        <h2 class="text-center text-5xl">My services</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Crafting visually stunning and user-friendly web designs
+            that elevate brands and enhance experiences. Let’s turn your vision into a digital reality together!</p>
+
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/web-icon.png" class="w-10 " alt="">
+                <h3 class="text-lg my-4 text-gray-700 dar:text-white">
+                    Web Design
+                </h3>
+                <p class=" text-sm text-gray-600 leading-5 dark:text-white/80">Creating stunning web designs that blend
+                    aesthetics and functionality for a seamless user experience."</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img
+                        src="./assets/right-arrow-dark.png" alt="" class="w-4"></a>
+            </div>
+
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/mobile-icon.png" class="w-10 " alt="">
+                <h3 class="text-lg my-4 text-gray-700 dar:text-white">
+                    Mobile Web Design
+                </h3>
+                <p class=" text-sm text-gray-600 leading-5 dark:text-white/80">Crafting user-friendly mobile web designs
+                    that deliver seamless experiences across all devices and screen sizes."</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img
+                        src="./assets/right-arrow-dark.png" alt="" class="w-4"></a>
+            </div>
+
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/ui-icon.png" class="w-10 " alt="">
+                <h3 class="text-lg my-4 text-gray-700 dar:text-white">
+                    UI/UX Design
+                </h3>
+                <p class=" text-sm text-gray-600 leading-5 dark:text-white/80">Transforming ideas into intuitive UI/UX
+                    designs that elevate user experiences and drive engagement across digital platforms.</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img
+                        src="./assets/right-arrow-dark.png" alt="" class="w-4"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!------------------My Work------------------------>
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+        <h2 class="text-center text-5xl">My Latest Work</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+            This portfolio highlights a series of frontend web applications, featuring responsive designs and dynamic
+            user interfaces, developed using HTML, CSS, and JavaScript. Each project includes live links for
+            exploration.
+        </p>
+
+        <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+            <!-- Repeatable Project Card -->
+            <div
+                class="aspect-square bg-[url('./assets/barber-shop.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-blue-500 hover:text-blue-700 font-semibold underline">
+                            <a href="https://pawanmalakar-hair-studio.netlify.app/" target="_blank"
+                                rel="noopener noreferrer" aria-label="View Barber Shop Project">
+                                View Project
+                            </a>
+                        </p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./assets/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Another Project Card (repeated) -->
+            <div
+                class="aspect-square bg-[url('./assets/Todolist.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-blue-500 hover:text-blue-700 font-semibold underline">
+                            <a href="https://pawanmalakar-to-do-app.netlify.app/" target="_blank"
+                                rel="noopener noreferrer" aria-label="View Todo List Project">
+                                View Project
+                            </a>
+                        </p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./assets/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional project cards -->
+            <div
+                class="aspect-square bg-[url('./assets/Weather-R.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-blue-500 hover:text-blue-700 font-semibold underline">
+                            <a href="https://pawanmalakar-my-weather-app.netlify.app/" target="_blank"
+                                rel="noopener noreferrer" aria-label="View Weather App Project">
+                                View Project
+                            </a>
+                        </p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img src="./assets/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat the above cards as needed -->
+
+        </div>
+
+        <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 
+                    dark:text-white dark:border-white dark:hover:bg-darkHover" aria-label="Show More Projects">
+            Show More
+            <img src="./assets/right-arrow-bold.png" alt="Arrow Icon" class="w-4 dark:hidden">
+            <img src="./assets/right-arrow-dark.png" alt="Arrow Icon Dark" class="w-4 hidden dark:block">
+        </a>
+    </div>
+
+
+    <!----------------------------------contact------------------->
+
+    <div id="contact"
+        class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+        <h4 class="text-center mb-2 text-lg ">Connect With Me</h4>
+        <h2 class="text-center text-5xl">Get In Touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">If you have any suggestions or questions, please fill out
+            this form. I’ll reply as soon as possible. I’m excited to hear your thoughts!</p>
+
+        <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto ">
+
+            <input type="hidden" name="access_key" value="389dfd6d-eb84-4b9d-9682-6561b7caf9f3">
+
+            <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+                <input type="text" placeholder="Enter Your Name" name="name"
+                    class="flex p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 required ">
+
+                <input type="text" placeholder="Enter Your Email" name="email"
+                    class="flex p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 required ">
+            </div>
+
+            <textarea rows="6" placeholder="Enter Your Message" name="message" id=""
+                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90 required "></textarea>
+
+            <button
+                class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">
+                Submit Now <img src="./assets/right-arrow-white.png" alt=""></button>
+        </form>
+
+    </div>
+
+    <!--------------------------------footer---------------------------------->
+
+
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="" alt="" class="w-36 mx-auto mb-2">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./assets/mail_icon.png" alt="" class="w-6 ">
+                malakarpawan44@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <p>&copy 2024 Pawan Malakar.All Rights Reserved</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0 ">
+                <li><a href="https://github.com/dashboard" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/pawan-malakar-246bb119b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/pawan.malakar_/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
